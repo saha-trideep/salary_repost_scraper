@@ -45,7 +45,7 @@ def process_get_data(soup):
 # Third step
 def out_put(data):
     df = pd.DataFrame(data)
-    df.to_csv('Highest paying jobs.csv')
+    df.to_csv('Highest paying jobs.csv', index=False)
 
 
 for i in range(1, 35):
@@ -56,12 +56,4 @@ for i in range(1, 35):
 out_put(details)
 print('Saved to csv')
 
-# to read csv
-df_new = pd.read_csv('Highest paying jobs.csv', index_col=0)
 
-# pip install openpyxl
-
-
-#  csv to excel sheet
-df_new.to_excel('Payscale.xlsx', index=False)
-print('saved CSV to excel')
