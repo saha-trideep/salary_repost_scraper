@@ -64,4 +64,4 @@ df_new = pd.read_csv('Highest paying jobs.csv', index_col=0)
 
 #  csv to excel sheet
 df_new.to_excel('Payscale.xlsx', index=False)
-print('convert csv to excel')
+print('Converted CSV to excel')
