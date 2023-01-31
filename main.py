@@ -23,13 +23,13 @@ def request_to_url(num):
 def process_get_data(soup):
     elements = soup.find_all('td', attrs={'class': 'data-table__cell'})
 
-    for i in range(0, len(elements), 6):
-        rank = elements[i].find('span', attrs={'class': 'data-table__value'}).text
-        major = elements[i + 1].find('span', attrs={'class': 'data-table__value'}).text
-        degree_type = elements[i + 2].find('span', attrs={'class': 'data-table__value'}).text
-        early_career_pay = elements[i + 3].find('span', attrs={'class': 'data-table__value'}).text
-        mid_career_pay = elements[i + 4].find('span', attrs={'class': 'data-table__value'}).text
-        high_meaning = elements[i + 5].find('span', attrs={'class': 'data-table__value'}).text
+    for index in range(0, len(elements), 6):
+        rank = elements[index].find('span', attrs={'class': 'data-table__value'}).text
+        major = elements[index + 1].find('span', attrs={'class': 'data-table__value'}).text
+        degree_type = elements[index + 2].find('span', attrs={'class': 'data-table__value'}).text
+        early_career_pay = elements[index + 3].find('span', attrs={'class': 'data-table__value'}).text
+        mid_career_pay = elements[index + 4].find('span', attrs={'class': 'data-table__value'}).text
+        high_meaning = elements[index + 5].find('span', attrs={'class': 'data-table__value'}).text
 
         payscale_details = {
             'Rank': rank,
